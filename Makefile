@@ -2,8 +2,9 @@
 
 CC := g++
 CCFLAGS := -std=c++17 -Wall -Wextra -I./include -fPIC
-
 LDFLAGS :=
+
+ZIPNAME := http_client.zip
 
 CLIENT := client
 
@@ -27,6 +28,6 @@ run:
 	./client
 
 pack:
-	zip -FSr 323CA_Marin_Radu_Tema4PC.zip client.* lib/ include/ Makefile README.md
+	zip -FSr $(ZIPNAME) client.* lib/ include/ Makefile README.md
 
 .PHONY: build clean run pack $(CLIENT)
